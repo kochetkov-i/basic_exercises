@@ -2,7 +2,8 @@
 # Необходимо вывести имена всех учеников из списка с новой строки
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+for name in names: 
+    print(name)
 
 
 # Задание 2
@@ -12,7 +13,9 @@ names = ['Оля', 'Петя', 'Вася', 'Маша']
 # Петя: 4
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+for name in names:
+    name_with_letters_count = f"{name}: {len(name)}"
+    print(name_with_letters_count)
 
 
 # Задание 3
@@ -25,7 +28,13 @@ is_male = {
     'Маша': False,
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+for name in names:
+    gender = is_male.get(name)
+    if gender:
+        name_with_gender = f"{name} мальчик"
+    else:
+        name_with_gender = f"{name} девочка"
+    print(name_with_gender)
 
 
 # Задание 4
@@ -40,7 +49,11 @@ groups = [
     ['Вася', 'Маша', 'Саша', 'Женя'],
     ['Оля', 'Петя', 'Гриша'],
 ]
-# ???
+all_groups_count = f"Всего {len(groups)} группы."
+print(all_groups_count)
+for number, group in enumerate(groups, start=1):
+    group_students_count = f"Группа {number}: {len(group)} ученика"
+    print(group_students_count)
 
 
 # Задание 5
@@ -54,4 +67,6 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
-# ???
+for number, group in enumerate(groups, start=1):
+    group_incude_students = f"Группа {number}: {', '.join(group)}"
+    print(group_incude_students)
